@@ -1,0 +1,20 @@
+Package: usdamars
+Type: Package
+Title: Request USDA Market News Data via the 'MyMarketNews' API 
+Version: 1.0.0
+Authors@R: c(person(given = "Bowen", family = "Chen", role = c("aut", "cre"), email = "bwchen0719@gmail.com", comment = c(ORCID = "0000-0003-0370-2756")),
+            person(given = "Elliott", family = "Dennis", role = "aut"))
+Description: Interface to easily access agricultural market news data via the United States Department of Agriculture (USDA)'s MyMarketNews
+            API at <https://mymarketnews.ams.usda.gov/mymarketnews-api>. The downloaded data can be saved for later off-line use. 
+            Also provide relevant information and metadata for each of the input variables needed for sending the data inquiry.   
+License: GPL (>= 2)
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.0.2
+Depends: R (>= 4.0.5)
+URL: https://github.com/cbw1243/usdampr 
+Imports: 
+        dplyr (>= 1.0.5),
+        httr (>= 1.4.2),
+        rvest (>= 1.0.0),
+        jsonlite (>= 1.7.2)

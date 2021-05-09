@@ -1,0 +1,42 @@
+#' Request report list
+#'
+#' Use this function to get a dataframe containing information of all reports.
+#' An API key is required.
+#'
+#'
+#' @return
+#' The function returns a dataframe with report id, name, title, published dates, etc.
+#' @export
+#'
+#' @examples
+#'
+#' \donttest{
+#' key <- 'your key here'
+#' reports <- get_reports()
+#' }
+
+get_report_list <- function(...){
+  endpoint <- "https://marsapi.ams.usda.gov/services/v1.2/reports/"
+  key <- tryCatch({get("key", envir = .GlobalEnv)},
+                   error = function(cond){NA})
+
+  if (is.na(key)){
+    stop('API key does not exist.')
+  }
+
+  response <- httr::GET(endpoint, authenticate(key, ""))
+  if (response$status_code != 200){
+    text_ <- httr::content(response, as = "text", encoding = 'UTF-8')
+    stop(rvest::html_text(rvest::read_html(text_)))
+  }
+  result <- jsonlite::fromJSON(httr::content(response, as = "text", encoding = 'UTF-8'))
+  result <- dplyr::mutate_if(result, is.list, function(x) unlist(lapply(x, function(i) paste0(i, collapse = ', '))))
+  return(result)
+}
+
+
+
+
+
+
+
