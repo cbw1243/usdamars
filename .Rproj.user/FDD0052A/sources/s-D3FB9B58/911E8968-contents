@@ -1,0 +1,19 @@
+# Install package from GitHub
+devtools::install_github('cbw1243/usdamars')
+library(usdamars)
+
+key <- 'h3bYbJ7SsUZUp3S2nMV3RFJXGkpLoQjI' # Bowen's API Key
+
+# Request report list
+list_ <- get_report_list()
+
+# Request data from a single report, either numeric ID or slug ID name.
+df1 <- ams_request(slugIDs = 1034)
+df1 <- ams_request(slugIDs_legacy = 'MD_DA106')
+
+
+df2 <- ams_request(slugIDs = 1035)
+df2 <- ams_request(slugIDs_legacy = 'MD_DA107')
+
+# Request data from multiple reports
+df3 <- ams_request(slugIDs = c(1034, 1035))
