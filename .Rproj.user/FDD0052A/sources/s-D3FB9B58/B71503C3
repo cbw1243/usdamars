@@ -1,0 +1,26 @@
+{
+    "id": "B71503C3",
+    "path": "C:/Users/BC/Dropbox (Work)/api_development/usdamars/R/get_report_list.R",
+    "project_path": "R/get_report_list.R",
+    "type": "r_source",
+    "hash": "0",
+    "contents": "",
+    "dirty": false,
+    "created": 1620575429438.0,
+    "source_on_save": false,
+    "relative_order": 4,
+    "properties": {
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "37,0",
+        "scrollLine": "11"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1620575440,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1620575440705,
+    "read_only": false,
+    "read_only_alternatives": []
+}

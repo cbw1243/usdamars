@@ -1,6 +1,7 @@
 # Install package from GitHub
 devtools::install_github('cbw1243/usdamars')
 library(usdamars)
+#remove.packages('usdamars')
 
 key <- 'h3bYbJ7SsUZUp3S2nMV3RFJXGkpLoQjI' # Bowen's API Key
 
