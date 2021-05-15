@@ -36,9 +36,9 @@ ams_request <- function(slugIDs = NULL, slugIDs_legacy = NULL){
     }
   }else{
     if(length(slugIDs_legacy) == 1){
-      out <- ams_request_single(slugID_legacy = slugIDs)
+      out <- ams_request_single(slugID_legacy = slugIDs_legacy)
     }else{
-      out <- lapply(slugIDs, function(i) ams_request_single(slugID_legacy = i))
+      out <- lapply(slugIDs_legacy, function(i) ams_request_single(slugID_legacy = i))
       names(out) <- slugID_legacy
     }
   }
